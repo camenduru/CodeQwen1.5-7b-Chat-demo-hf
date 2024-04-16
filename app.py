@@ -68,20 +68,20 @@ def model_chat(query: Optional[str], history: Optional[History], system: str
 
 
 with gr.Blocks() as demo:
-    gr.Markdown("""<center><font size=8>codeqwen1.5-7b-chat Bot👾</center>""")
+    gr.Markdown("""<center><font size=8>CodeQwen1.5-7B-Chat Bot👾</center>""")
 
     with gr.Row():
         with gr.Column(scale=3):
             system_input = gr.Textbox(value=default_system, lines=1, label='System')
         with gr.Column(scale=1):
-            modify_system = gr.Button("🛠️ 设置system并清除历史对话", scale=2)
+            modify_system = gr.Button("🛠️ Set system prompt and clear history", scale=2)
         system_state = gr.Textbox(value=default_system, visible=False)
     chatbot = gr.Chatbot(label='codeqwen1.5-7b-chat')
     textbox = gr.Textbox(lines=2, label='Input')
 
     with gr.Row():
-        clear_history = gr.Button("🧹 清除历史对话")
-        sumbit = gr.Button("🚀 发送")
+        clear_history = gr.Button("🧹 Clear History")
+        sumbit = gr.Button("🚀 Send")
 
     sumbit.click(model_chat,
                  inputs=[textbox, chatbot, system_state],
