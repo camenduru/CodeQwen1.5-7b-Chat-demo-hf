@@ -1,6 +1,6 @@
 ---
-title: CodeQwen1.5 7b Chat Demo
-emoji: 🐠
+title: CodeQwen1.5 7B Chat Demo
+emoji: 🥸
 colorFrom: yellow
 colorTo: pink
 sdk: gradio
