@@ -85,7 +85,8 @@ with gr.Blocks() as demo:
 
     sumbit.click(model_chat,
                  inputs=[textbox, chatbot, system_state],
-                 outputs=[textbox, chatbot, system_input])
+                 outputs=[textbox, chatbot, system_input],
+                 concurrency_limit = 100)
     clear_history.click(fn=clear_session,
                         inputs=[],
                         outputs=[textbox, chatbot])
